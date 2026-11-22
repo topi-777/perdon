@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* Estilo del Sobre Inicial */
+.sobre-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    animation: aparecer 0.6s ease;
+}
+
+.icono-corazon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.sobre-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.sobre-card p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Estilo de la Carta Abierta */
+.carta-papel {
+    background: #fffdf9;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+    border-top: 6px solid #e74c3c;
+    animation: aparecer 0.8s ease;
+}
+
+.carta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 25px;
+}
+
+.carta-header h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    color: #c0392b;
+}
+
+.fecha {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.carta-cuerpo p {
+    font-family: 'Georgia', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #2d3436;
+}
+
+.firma {
+    margin-top: 25px;
+}
+
+.separador {
+    border: 0;
+    height: 1px;
+    background: #e0dcd3;
+    margin: 25px 0;
+}
+
+/* Formulario de respuesta */
+.respuesta-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #2c3e50;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    resize: vertical;
+    margin-bottom: 15px;
+    background: #ffffff;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #c0392b;
+}
+
+.botones-accion {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-primario {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.btn-aceptar {
+    background-color: #e74c3c;
+    color: #fff;
+    flex: 1;
+}
+
+.btn-secundario {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    flex: 1;
+}
+
+.mensaje-estado {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

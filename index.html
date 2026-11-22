@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una carta para ti</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SDK de Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <main class="container">
+        <!-- Vista inicial: Sobre cerrado -->
+        <div id="sobre-wrapper" class="sobre-card">
+            <div class="icono-corazon">✉️</div>
+            <h1>Tengo algo importante que decirte</h1>
+            <p>Por favor, tómate un momento para leer esto.</p>
+            <button id="btn-abrir" class="btn-primario">Abrir carta</button>
+        </div>
+
+        <!-- Vista de la carta desplegada -->
+        <article id="carta-contenido" class="carta-papel oculto">
+            <header class="carta-header">
+                <span class="fecha">Hoy</span>
+                <h2>Perdón...</h2>
+            </header>
+
+            <div class="carta-cuerpo">
+                <p>Sé que me equivoqué y lamento mucho haberte hecho sentir mal. No hay excusas para lo que pasó, y lo que más me importa en este momento es que sepas cuánto valoro lo nuestro.</p>
+                <p>Estuve reflexionando bastante y entiendo perfectamente tu punto de vista. Prometo esforzarme para mejorar y no volver a cometer el mismo error.</p>
+                <p class="firma">Con sinceridad,<br><strong>[Tu Nombre]</strong></p>
+            </div>
+
+            <hr class="separador">
+
+            <!-- Sección interactiva conectada a Supabase -->
+            <section id="seccion-respuesta" class="respuesta-box">
+                <h3>¿Qué decides?</h3>
+                <textarea id="mensaje-extra" rows="3" placeholder="Si quieres escribirme algo, hazlo aquí (opcional)..."></textarea>
+                
+                <div class="botones-accion">
+                    <button id="btn-perdonar" class="btn-aceptar">Te perdono ❤️‍🩹</button>
+                    <button id="btn-tiempo" class="btn-secundario">Necesito hablarlo / tiempo</button>
+                </div>
+                <p id="estado-envio" class="mensaje-estado"></p>
+            </section>
+        </article>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
